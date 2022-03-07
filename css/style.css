@@ -34,6 +34,7 @@ header .area-pesquisa{
     flex-flow: column;
     justify-content: center;
     height: 100%;
+    position: relative;
 }
 
 /* input */
@@ -41,19 +42,29 @@ header .area-pesquisa input{
     outline: none;
     height: 42%;
     width: 300px;
-    background: transparent;
-    border: none;
+    border: 2px solid #80278C;
     font-size: 1em;
     color: rgb(206, 206, 206);
-    transition: all 0.4s ease-out, border 0.4s ease 0.2s;
-    border-bottom: 1px solid #80278C;
-}
-
-header .area-pesquisa input:focus{
+    transition: all 0.4s ease-out;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.555);
     border-radius: 50px;
-    border: 1px solid #80278C;
+}
+
+header .area-pesquisa input:focus{
+    border-radius: 0px;
+    padding: 0px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #80278C;
+}
+
+header .area-pesquisa button{
+    background: none;
+    border: none;
+    position: absolute;
+    right: 6px;
+    transition: all 0.4s ease-out;
 }
 
 header .area-pesquisa input::-webkit-input-placeholder{
@@ -67,10 +78,17 @@ header .area-pesquisa input::-moz-input-placeholder{
 }
 
 header .area-pesquisa input::-webkit-search-cancel-button{
-    -webkit-appearance: none;
-    height: 16px;
-    width: 16px;
-    background: url('../img/xmark-solid.svg') center center no-repeat;
+    height: 12px;
+    width: 12px;
+    content: url('../img/close.png');
+    transition: all 0.4s ease-out;
+}
+
+header .area-pesquisa input::-moz-search-cancel-button{
+    height: 12px;
+    width: 12px;
+    content: url('../img/close.png');
+    transition: all 0.2s ease-out;
 }
 
 /* AREA ICONES DIREITA */
@@ -87,6 +105,12 @@ header .area-direita ul{
 
 header .area-direita a{
     color: white;
+    transition: all 0.2s ease-in;
+}
+
+header .area-direita a:hover{
+    color: pink;
+    transform: translateY(-3px);
 }
 
 header .area-direita a img{
