@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sanchez', serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container{
+    background: #80278C;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* !-------- HEADER --------! */
+
+header{
+    height: 90px;
+    background: #181526;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* AREA LOGO */
+header .area-logo img{
+    height: 80px;
+}
+
+/* AREA PESQUISA */
+header .area-pesquisa{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* input */
+header .area-pesquisa input{
+    outline: none;
+    height: 42%;
+    width: 300px;
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    color: rgb(206, 206, 206);
+    transition: all 0.4s ease-out, border 0.4s ease 0.2s;
+    border-bottom: 1px solid #80278C;
+}
+
+header .area-pesquisa input:focus{
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 50px;
+    border: 1px solid #80278C;
+}
+
+header .area-pesquisa input::-webkit-input-placeholder{
+    color: grey;
+    font-size: 18px;
+}
+
+header .area-pesquisa input::-moz-input-placeholder{
+    color: grey;
+    font-size: 18px;
+}
+
+header .area-pesquisa input::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    background: url('../img/xmark-solid.svg') center center no-repeat;
+}
+
+/* AREA ICONES DIREITA */
+header .area-direita{
+    width: 350px;
+    font-size: 18px;
+}
+
+header .area-direita ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .area-direita a{
+    color: white;
+}
+
+header .area-direita a img{
+    margin-bottom: -5px;
+    height: 40px;
+    margin-left: 10%;
+}
